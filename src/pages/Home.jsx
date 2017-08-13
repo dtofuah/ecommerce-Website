@@ -18,7 +18,7 @@ class Home extends Component {
 								${product.price}
 							</p>
 							<div>
-								<Link to={`description/${productId}`}>
+								<Link to={`description/${product.id}`}>
 								 <img src = {product.images[0].medium}/>
 							 	<img src = {product.images[1].medium}/>
 	  	</Link>

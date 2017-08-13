@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-
+import { Button } from "semantic-ui-react";
 
 class Cart extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			cartTotal: 0,
+			// cartTotal: 0,
 		};
 	}
 	render() {
@@ -26,7 +26,7 @@ class Cart extends Component {
 							);
 						})}
 					</ul>
-					<div className="cart-count">{ cartCount }</div>
+					<div className="cart-count">{ cartCount } items in your Cart</div>
 				</div>
 			);
 		}
