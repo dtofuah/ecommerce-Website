@@ -5,11 +5,23 @@ class Cart extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			// cartTotal: 0,
+			cartTotal: 0,
 		};
 	}
+
+	_handleCartTotal() {
+		const { cart } = this.props;
+		let sum = 0;
+		cart.forEach((item) => {
+			return sum = sum + item.price;
+		});
+		this.setState({
+			cartTotal: sum,
+		});
+	}
 	render() {
-		const { cart, cartCount } = this.props;
+		const { cart, cartCount, product } = this.props;
+		const { cartTotal, item } = this.state;
 		if (cartCount > 0) {
 			return (
 				<div className="app">
@@ -27,6 +39,10 @@ class Cart extends Component {
 						})}
 					</ul>
 					<div className="cart-count">{ cartCount } items in your Cart</div>
+					<div className="product-add-description">
+					 <Button  onClick = {this._handleCartTotal}>
+						 PROCEED TO CHECKOUT WITH A TOTAL OF ${cartTotal} </Button>
+					 </div>
 				</div>
 			);
 		}

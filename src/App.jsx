@@ -22,6 +22,10 @@ class App extends React.Component {
 		});
 	}
 
+	_totalCart = (cart) => {
+
+	};
+
 	_addCart = (productId) => {
 		const { products, cart } = this.state;
 		console.log(cart);
@@ -55,6 +59,7 @@ class App extends React.Component {
 								<Cart {...props}
 									cart={cart}
 									cartCount={cartCount}
+									totalCart={this._totalCart}
 								/>
 							);
 						}}/>
