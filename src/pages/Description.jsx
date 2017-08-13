@@ -28,9 +28,19 @@ class Description extends Component {
 							<p> Ratings: {product.rating}</p>
 							<img src = {product.images[1].medium}/>
 						 <img src = {product.images[0].medium}/>
+
 						</div>
 		);
-	}
+
+
+
+						 <div className="product-add-description">
+							 <Button value = {product.id} onClick = {this._handleAddCartTotal}>
+								 ADD TO CART </Button>
+							 </div>
+				</div>
+			);
+		}
 }
 
 export default Description;
