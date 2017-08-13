@@ -11,11 +11,8 @@ class Navigation extends Component {
 			to: "/about",
 			text: "About",
 		}, {
-			to: "/checkout",
-			text: "Checkout",
-		}, {
-			to: "/mystery",
-			text: "Mystery page",
+			to: "/cart",
+			text: "Cart",
 		}];
 
 		return (
@@ -33,6 +30,7 @@ class Navigation extends Component {
 						</NavLink>
 					);
 				})}
+				<span className = "nav-cartTotalItems">{this.props.cartCount}</span>
 			</nav>
 		);
 	}

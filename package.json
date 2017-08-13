@@ -34,6 +34,7 @@
     "react-router-dom": "^4.1.2",
     "reset-css": "^2.2.1",
     "sass-loader": "^6.0.6",
+    "semantic-ui-react": "^0.71.4",
     "style-loader": "^0.18.2",
     "webpack": "^3.4.1",
     "webpack-dev-server": "^2.6.1"
