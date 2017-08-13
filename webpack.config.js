@@ -127,8 +127,6 @@ module.exports = {
 		port: process.env.PORT || 3000,
 		hot: true,
 		overlay: true,
-		historyApiFallback: {
-			index: 'index.html',
-		},
+		historyApiFallback: true,
 	},
 };

@@ -11,6 +11,9 @@ class Navigation extends Component {
 			to: "/about",
 			text: "About",
 		}, {
+			to: "/checkout",
+			text: "Checkout",
+		}, {
 			to: "/mystery",
 			text: "Mystery page",
 		}];
