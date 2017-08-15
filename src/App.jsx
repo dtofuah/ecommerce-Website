@@ -31,6 +31,7 @@ class App extends React.Component {
 				this._getProduct(productId),
 			],
 			cartCount: cart.length + 1,
+
 		});
 	};
 	render() {

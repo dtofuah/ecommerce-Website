@@ -20,7 +20,7 @@ class Description extends Component {
 
 		render() {
 			const { product } = this.props;
-			// const product = PRODUCTS[this.state.productId];
+
 			return (
 			 <div className = "Description">
 
