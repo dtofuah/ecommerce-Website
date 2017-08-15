@@ -9,9 +9,22 @@ class Cart extends Component {
 			 items:{},
 		};
 	}
+
+	_handleCartTotal() {
+		const { cart } = this.props;
+		let sum = 0;
+		cart.forEach((item) => {
+			return sum = sum + item.price;
+		});
+		this.setState({
+			cartTotal: sum,
+		});
+	}
 	render() {
+
 		const { cart, cartCount } = this.props;
 		let sum = 0;
+
 		if (cartCount > 0) {
 			return (
 				<div className="app">
@@ -30,6 +43,7 @@ class Cart extends Component {
 						})}
 					</ul>
 					<div className="cart-count">{ cartCount } items in your Cart</div>
+
 					<div className="sum"> Total: ${ sum }.00 </div>
 					<div className="checkout-button">
 						<Button onClick = {this._handleCheckout}>
