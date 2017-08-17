@@ -109,7 +109,12 @@ else {
 
 // *** Final Config *** //
 module.exports = {
-	entry: "./src/index.js",
+	entry: IS_DEV ? {
+		main: [
+			"./src/index.js",
+			"webpack-hot-middleware/client",
+		],
+	} : "./src/index.js",
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		filename: "app.[hash:8].js",

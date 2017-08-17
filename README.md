@@ -44,3 +44,6 @@ I'm using the following apps for design / functionality inspiration:
 ## Github and Heroku links
 github: https://github.com/dtofuah/ecommerce-Website
 Heroku:
+
+
+Server was provided by https://github.com/wbobeirne/nycda-ecommerce-server/wiki/setup
