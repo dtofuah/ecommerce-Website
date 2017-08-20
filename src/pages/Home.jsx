@@ -2,8 +2,14 @@
 import React, { Component } from "react";
 import PRODUCTS from "json/products.json";
 import { Link } from "react-router-dom";
+import { getAll } from "actions/product";
+import { connect } from "react-redux";
+
 
 class Home extends Component {
+	componentDidMount() {
+		this.props.getAll();
+		 }
 	render() {
 		return (
 			<div className = "Home">
@@ -33,4 +39,12 @@ class Home extends Component {
 	}
 }
 
-export default Home;
+function mapStateToProps(state, props) {
+	console.log(state);
+	const { products } = state.product;
+	return {
+		product: products,
+	};
+}
+
+export default connect(mapStateToProps, { getAll }) (Home);

@@ -1,7 +1,8 @@
 import "./App.scss";
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { createStore } from "redux";
+import  reduxThunk  from "redux-thunk";
+import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import PRODUCTS from "json/products.json";
 import Navigation from "components/Navigation";
@@ -12,7 +13,7 @@ import Description from "pages/Description";
 import FourOhFour from "pages/404";
 import reducers from "./reducers";
 
-const store = createStore(reducers);
+const store = createStore(reducers, applyMiddleware(reduxThunk));
 
 class App extends React.Component {
 	state = {
@@ -53,14 +54,7 @@ class App extends React.Component {
 		 			<Switch>
 			 			<Route exact path="/" component={Home} />
 			 			<Route exact path="/about" component={About} />
-			 			<Route path="/description/:productId" render = {(props) => {
-			 				return (
-				 				<Description
-				 					product = {this._getProduct(props.match.params.productId)}
-				 	 				addCart = {this._addCart}
-					 			/>
-					 		);
-					 	}}/>
+			 			<Route path="/description/:productId" component={Description}/>
 					 	<Route exact path="/cart" component={Cart}/>
 				 		<Route path="*" component={404} />
 					 </Switch>
