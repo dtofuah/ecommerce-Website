@@ -129,7 +129,6 @@ const eslintConf = {
 		}],
 		"wrap-iife": [SEV2, "outside"],
 		"arrow-spacing": [SEV3, { before: true, after: true }],
-		"arrow-body-style": [SEV3, "as-needed"],
 		"arrow-parens": [SEV3, "always"],
 
 		// Classes

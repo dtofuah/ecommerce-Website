@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import { Button } from "semantic-ui-react";
+import { connect } from "react-redux";
+import { addCart } from "actions/cart";
+
 
 class Cart extends Component {
 	constructor(props) {
@@ -61,4 +64,12 @@ class Cart extends Component {
 		}
 	}
 }
-export default Cart;
+function mapStateToProps(state, props) {
+	console.log(state);
+	const { cart, cartCount } = state.cart;
+	return {
+		cart,
+		cartCount,
+	};
+}
+export default connect(mapStateToProps, { addCart }) (Cart);

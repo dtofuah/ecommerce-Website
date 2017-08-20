@@ -1,4 +1,4 @@
-# Outline eCommerce Site
+# Outline eCommerce Site (React)
 
 This is the outline for a website that is an eCommerce app, using React,that has the ability of a visitor to see all items and also buy items of this site. This site will have a main page that allows you to to see all products available on the site to purchase, a product page when the item is clicked that shoes details of the product and a checkout page that allows a visitor to add items they have purchased to a chart and pay for them.
 

@@ -1,7 +1,8 @@
 import { combineReducers } from "redux";
-import it from "./user";
-import messages from "./messages";
+import cart from "./cart";
+
+
 
 export default combineReducers({
-	itemId,
+	cart,
 });
