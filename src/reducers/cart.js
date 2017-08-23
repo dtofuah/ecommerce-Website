@@ -1,7 +1,5 @@
-
-
+import PRODUCTS from "json/products.json";
 const INITIAL_STATE = {
-	itemId: [],
 	cartCount: 0,
 	cart: [],
 };
@@ -9,20 +7,19 @@ const INITIAL_STATE = {
 export default function addItemReducer(state = INITIAL_STATE, action) {
 	switch (action.type) {
 	case "ADD_ITEM":
+		const products = PRODUCTS;
 		console.log("IN THE GOD DAMN REDUCER");
-		return {
+		const foundProduct = products.find((product) => product.id === action.itemId);
+		let item = {
 			...state,
-			itemId: [
-				...state.itemId,
-				{
-					itemId: action.itemId,
-
-				},
-
+			cart: [
+				...state.cart,
+					 foundProduct,
 			],
-
 			cartCount: state.cartCount + 1,
 		};
+		console.log("HERE'S THE MOFO STATE", item);
+		return item;
 
 
 

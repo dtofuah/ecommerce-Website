@@ -1,8 +1,8 @@
-export function addCart(itemId, cartCount) {
+export function addCart(product, cartCount) {
 	return (dispatch) => {
 	return dispatch ({
 		type: "ADD_ITEM",
-		itemId,
+		product,
 
 		type: "CART_COUNT",
 	 cartCount,

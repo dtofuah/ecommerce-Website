@@ -5,13 +5,6 @@ import { addCart } from "actions/cart";
 
 
 class Cart extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			 cartTotal: 0,
-			 items:{},
-		};
-	}
 
 	_handleCartTotal() {
 		const { cart } = this.props;
@@ -66,12 +59,11 @@ class Cart extends Component {
 }
 function mapStateToProps(state, props) {
 	console.log(state);
-	const { cart, cartCount } = state.cart;
 	return {
-		cart,
-		cartCount,
+		cart:state.cart.cart,
+		cartCount: state.cart.cartCount,
 	};
 }
 
 
-export default connect(mapStateToProps, { addCart }) (Cart);
+export default connect(mapStateToProps) (Cart);
