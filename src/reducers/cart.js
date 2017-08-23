@@ -9,6 +9,7 @@ const INITIAL_STATE = {
 export default function addItemReducer(state = INITIAL_STATE, action) {
 	switch (action.type) {
 	case "ADD_ITEM":
+		console.log("IN THE GOD DAMN REDUCER");
 		return {
 			...state,
 			itemId: [
@@ -17,15 +18,14 @@ export default function addItemReducer(state = INITIAL_STATE, action) {
 					itemId: action.itemId,
 
 				},
+
 			],
+
+			cartCount: state.cartCount + 1,
 		};
 
 
-	case "CART_COUNT":
-		return {
-			...state,
-				 cartCount: state.cartCount + 1,
-		};
+
 
 	default:
 		return state;

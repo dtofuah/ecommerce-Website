@@ -72,4 +72,6 @@ function mapStateToProps(state, props) {
 		cartCount,
 	};
 }
+
+
 export default connect(mapStateToProps, { addCart }) (Cart);

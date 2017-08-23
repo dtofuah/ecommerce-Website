@@ -1,19 +1,24 @@
-export function addCart(itemId) {
-	return {
+export function addCart(itemId, cartCount) {
+	return (dispatch) => {
+	return dispatch ({
 		type: "ADD_ITEM",
 		itemId,
 
-	};
-}
-
-
-
-export function cartCount(cartCount) {
-	return { type: "CART_COUNT",
+		type: "CART_COUNT",
 	 cartCount,
- 	};
+ });
+};
 }
 
+
+// export function cartCount(cartCount) {
+// 	return (dispatch) => {
+// 	return dispatch ({
+// 		type: "CART_COUNT",
+// 	 cartCount,
+//  });
+// };
+// }
 
 export function removeCart(itemId) {
 	return {

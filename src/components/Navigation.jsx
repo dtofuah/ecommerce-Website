@@ -1,6 +1,9 @@
 import "./Navigation.scss";
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import { addCart } from "actions/cart";
+import { connect } from "react-redux";
+
 
 class Navigation extends Component {
 	render() {
@@ -36,4 +39,11 @@ class Navigation extends Component {
 	}
 }
 
-export default Navigation;
+function mapStateToProps(state, props) {
+	console.log(state);
+	return {
+		cartCount:state.cart.cartCount,
+	};
+}
+
+export default connect(mapStateToProps ) (Navigation);

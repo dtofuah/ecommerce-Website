@@ -12,7 +12,7 @@ class Description extends Component {
 		this.props.getOne(this.props.productId);
 		 }
 
-	_handleAddCart = (productId) => {
+	_handleAddCart = (event) => {
 		this.props.addCart(this.props.product.id);
 	}
 
@@ -41,7 +41,7 @@ class Description extends Component {
 						 <img src = {product.images[0].medium}/>
 
 						 <div className="product-add-description">
-						 	<Button value = {product.id} onClick = {this._handleAddCart}>
+						 	<Button value={product.id} onClick={this._handleAddCart}>
 						 		ADD TO CART </Button>
 						 	</div>
 				 		</div>
@@ -59,7 +59,20 @@ function mapStateToProps(state, props) {
 		productId: props.match.params.productId,
 		product: activeProduct,
 		cart: state.cart,
+		cartCount: state.cartCount,
 	};
 }
 
-export default connect(mapStateToProps, { getOne, addCart }) (Description);
+const mapDispatchToProps = dispatch =>({
+  addCart: (id)=> dispatch({type: 'ADD_ITEM', itemId: id}),
+	getOne: (id) => {
+		const products = PRODUCTS;
+		const foundProduct = products.find((product) => product.id === id);
+		return dispatch({
+			type: "GET_ONE_PRODUCT",
+			product: foundProduct,
+		});
+	}
+});
+
+export default connect(mapStateToProps, mapDispatchToProps) (Description);

@@ -17,7 +17,6 @@ const store = createStore(reducers, applyMiddleware(reduxThunk));
 
 class App extends React.Component {
 	state = {
-		cartCount: 0,
 		cart: [],
 		products: PRODUCTS,
 	}
@@ -50,7 +49,7 @@ class App extends React.Component {
 			<BrowserRouter>
 				<Provider store={store}>
 		 		<div>
-		 			<Navigation cartCount={ this.state.cartCount }/>
+		 			<Navigation />
 		 			<Switch>
 			 			<Route exact path="/" component={Home} />
 			 			<Route exact path="/about" component={About} />
