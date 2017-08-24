@@ -1,3 +1,5 @@
+import API from "util/api";
+
 import PRODUCTS from "json/products.json";
 
 export function getAll() {

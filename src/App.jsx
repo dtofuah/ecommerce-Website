@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import PRODUCTS from "json/products.json";
 import Navigation from "components/Navigation";
 import Home from "pages/Home";
+import Checkout from "pages/Checkout";
 import About from "pages/About";
 import Cart from "pages/Cart";
 import Description from "pages/Description";
@@ -55,6 +56,7 @@ class App extends React.Component {
 			 			<Route exact path="/about" component={About} />
 			 			<Route path="/description/:productId" component={Description}/>
 					 	<Route exact path="/cart" component={Cart}/>
+						<Route exact path="/checkout" component={Checkout}/>
 				 		<Route path="*" component={404} />
 					 </Switch>
 				 </div>

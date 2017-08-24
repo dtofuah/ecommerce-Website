@@ -16,6 +16,12 @@ class Cart extends Component {
 			cartTotal: sum,
 		});
 	}
+
+
+	_handleCheckout() {
+		window.location='Checkout';
+	}
+
 	render() {
 
 		const { cart, cartCount } = this.props;
@@ -66,4 +72,4 @@ function mapStateToProps(state, props) {
 }
 
 
-export default connect(mapStateToProps) (Cart);
+export default connect(mapStateToProps)(Cart);
