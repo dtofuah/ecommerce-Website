@@ -11,15 +11,6 @@ export function addCart(product, cartCount) {
 }
 
 
-// export function cartCount(cartCount) {
-// 	return (dispatch) => {
-// 	return dispatch ({
-// 		type: "CART_COUNT",
-// 	 cartCount,
-//  });
-// };
-// }
-
 export function removeCart(itemId) {
 	return {
 		type: "REMOVE_ITEM",

@@ -2,9 +2,10 @@ import React, { Component } from "react";
 import { Button } from "semantic-ui-react";
 import { connect } from "react-redux";
 import { addCart } from "actions/cart";
-
+import { Link } from "react-router-dom";
 
 class Cart extends Component {
+
 
 	_handleCartTotal() {
 		const { cart } = this.props;
@@ -17,10 +18,6 @@ class Cart extends Component {
 		});
 	}
 
-
-	_handleCheckout() {
-		window.location='Checkout';
-	}
 
 	render() {
 
@@ -48,8 +45,10 @@ class Cart extends Component {
 
 					<div className="sum"> Total: ${ sum }.00 </div>
 					<div className="checkout-button">
-						<Button onClick = {this._handleCheckout}>
+						<Link to='/checkout'>
+						<Button >
 							PROCEED TO CHECKOUT </Button>
+						</Link>
 						 </div>
 				</div>
 			);
