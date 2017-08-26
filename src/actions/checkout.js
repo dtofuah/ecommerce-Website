@@ -1,6 +1,6 @@
 import API from "util/api";
 
-export default function submitOrder(order, cartItemIds) {
+ export function submitOrder(order, cartItemIds) {
 	return (dispatch, getStore) => {
 
 		const { cart } = getStore().cart;
@@ -10,14 +10,16 @@ export default function submitOrder(order, cartItemIds) {
 		dispatch({
 			type: "SUBMIT_ORDER_START",
 		});
-		console.log("submitOrder(order, cart)", order.zipCode, productIds);
+		console.log("submitOrder(order, cart)", order.zip, productIds);
 		API.post('/orders', {
 			args: {
-				name: order.name,
+				firstname: order.firstname,
+				lastname: order.lastname,
 				address: order.address,
 				city: order.city,
+				apt: order.apt,
 				state: order.state,
-				zipcode: order.zipCode,
+				zip: order.zipCode,
 				products: productIds,
 			},
 		})

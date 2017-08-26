@@ -1,30 +1,27 @@
 const INITIAL_STATE = {
-	user: {},
-	orderPending: false,
-	isValid: false,
-	orderSuccess: false,
+	order: {},
 	error: [],
 };
 
 function checkoutReducer(state = INITIAL_STATE, action) {
 	switch (action.type) {
-		case "ORDER_PENDING":
-			return {
-				...state,
-				orderPending: true,
-			};
 
-		case "ORDER_SUCCESS":
-			return {
-				...state,
-				orderPending: false,
-				orderSuccess: true,
+	case "SUBMIT_ORDER_SUCCESS":
+		return {
+			...state,
+			order: action.order,
+		};
 
-			};
 
-		default:
-			return state;
+	case "SUBMIT_ORDER_FAILURE":
+		return {
+			...state,
+			error: action.error,
+		};
+
+	default:
+		return state;
 	}
-};
+}
 
 export default checkoutReducer;
