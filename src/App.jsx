@@ -6,6 +6,7 @@ import { createStore, applyMiddleware } from "redux";
 import { Provider } from "react-redux";
 import PRODUCTS from "json/products.json";
 import Navigation from "components/Navigation";
+import Main from "pages/Main";
 import Home from "pages/Home";
 import Checkout from "pages/Checkout";
 import About from "pages/About";
@@ -52,6 +53,7 @@ class App extends React.Component {
 		 		<div>
 		 			<Navigation />
 		 			<Switch>
+						<Route exact path="/home" component={Main} />
 			 			<Route exact path="/" component={Home} />
 			 			<Route exact path="/about" component={About} />
 			 			<Route path="/description/:productId" component={Description}/>

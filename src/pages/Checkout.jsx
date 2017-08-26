@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button } from "semantic-ui-react";
 import { connect } from "react-redux";
 import { addCart } from "actions/cart";
-
+import "./Checkout.scss";
 
 
 
@@ -26,34 +26,33 @@ class Checkout extends Component {
 
 		// if (cartCount > 0) {
 			return (
-				<div className="app">
-					<h1>Cart</h1>
+				<div className="checkout_page">
+					<div className="checkout_header"><h1>Finishing Your Checkout</h1></div>
 					<ul>
 						{cart.map((item) => {
 							sum = sum + parseInt(item.price);
 							return (
 								<div className="items-container">
 									<img src={item.images[0].small} />
-									<h1>{item.name}</h1>
-									<h3>{item.price}</h3>
+									<div className="item_name"><h1>{item.name}</h1></div>
+									<div className="item_price"><h3>${item.price}</h3></div>
 
 								</div>
 							);
 						})}
 					</ul>
-					<div className="cart-count">{ cartCount } items in your Cart</div>
-
 					<div className="sum"> Total: ${ sum }.00 </div>
+					<div className="cart-count">{ cartCount } items to checkout </div>
 
-
+						<div className="info"> ENTER SHIPING IINFORMATION</div>
 						 <div className="checkout-form">
 	 						<form>
-	 							First Name: <input type= "text" placeholder="First name"/>
-	 							Last Name<input type= "text" placeholder="Last Name"/>
-	 							Street: <input type= "text" placeholder="Street"/>
-	 							Apartment: <input type= "text" placeholder="Apt"/>
-	 							City: <input type= "text" placeholder="City"/>
-	 							State:	<select name="state" id="state">
+	 							<lable>First Name:</lable>   <input type= "text" placeholder="First name"/><br/><br/>
+	 							<lable>Last Name:</lable>    <input type= "text" placeholder="Last Name"/><br/><br/>
+	 							<lable>Street:</lable>       <input type= "text" placeholder="Street"/><br/><br/>
+	 							<lable>Apartment:</lable>    <input type= "text" placeholder="Apt"/><br/><br/>
+	 							<lable>City: </lable>        <input type= "text" placeholder="City"/><br/><br/>
+	 							<lable>State:</lable>	      <select name="state" id="state">
 	 										  <option value="" selected="selected">Select a State</option>
 	 										  <option value="AL">Alabama</option>
 	 										  <option value="AK">Alaska</option>
@@ -106,13 +105,13 @@ class Checkout extends Component {
 	 										  <option value="WV">West Virginia</option>
 	 										  <option value="WI">Wisconsin</option>
 	 										  <option value="WY">Wyoming</option>
-	 										</select>
-	 							Zip Code: <input type="number" placeholder="Zip" />
+	 										</select><br/><br/>
+	 							<lable>Zip Code:</lable>     <input type="number" placeholder="Zip" /><br/>
 	 						</form>
 	 					</div>
 	 					<div className="checkout-button">
 	 						<Button onClick = {this._handleForm}>
-	 							COMPLETE CHECKOUT </Button>
+	 							PURCHACE </Button>
 	 					</div>
 	 				</div>
 

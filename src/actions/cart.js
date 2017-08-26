@@ -9,12 +9,3 @@ export function addCart(product, cartCount) {
  });
 };
 }
-
-
-export function removeCart(itemId) {
-	return {
-		type: "REMOVE_ITEM",
-		itemId,
-
-	};
-}

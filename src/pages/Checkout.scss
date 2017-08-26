@@ -1,0 +1,120 @@
+.checkout_page{
+	margin-left: 20px;
+}
+
+
+.items-container{
+	// float: right;
+	margin-left: 30px;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+
+}
+
+.item_name{
+	float: left;
+	padding-left: 30px;
+}
+
+.item_price{
+	float: left;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+.checkout_header{
+	text-align: center;
+	padding-bottom: 30px;
+	color: red;
+}
+.checkout-form{
+	padding-top: 20px;
+	padding-left: 50px;
+}
+
+select {
+	font    : .9em/1.5em "handwriting", sans-serif;
+
+  padding : 0 10px;
+  margin  : 0;
+  width   : 200px;
+
+
+
+	height: 2.5em;
+  vertical-align: middle;
+	background   : rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin: 0;
+
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+
+
+input {
+	font    : .9em/1.5em "handwriting", sans-serif;
+
+  padding : 0 10px;
+  margin  : 0;
+  width   : 500px;
+
+
+
+	height: 3.5em;
+  vertical-align: middle;
+	background   : rgba(0,0,0,.1);
+  border-radius: 5px;
+  margin: 0;
+
+  -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+          box-sizing: border-box;
+}
+
+button:after {
+  content: " >>>";
+}
+
+button:hover,
+button:focus {
+  outline   : none;
+  background: #000;
+  color   : #FFF;
+}
+button {
+	height: 40px;
+	width: 250px;
+  padding      : 5px;
+
+  font         : bold 1.5em sans-serif;
+  border       : 2px solid #333;
+  border-radius: 5px;
+  background   : none;
+
+  cursor       : pointer;
+
+-webkit-transform: rotate(-1.5deg);
+   -moz-transform: rotate(-1.5deg);
+    -ms-transform: rotate(-1.5deg);
+     -o-transform: rotate(-1.5deg);
+        transform: rotate(-1.5deg);
+}
+
+.checkout-button {
+	padding-top: 50px;
+	text-align: center;
+}
+
+.info {
+	text-decoration: underline;
+	height: 100px;
+	text-align: center;
+}
+
+label {
+	display: inline-block;
+    width:100px;
+    text-align: right;
+}

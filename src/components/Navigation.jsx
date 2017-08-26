@@ -13,15 +13,14 @@ class Navigation extends Component {
 		}, {
 			to: "/about",
 			text: "About",
-		}, {
-			to: "/cart",
-			text: "Cart",
-		}, {
-			to: "/checkout",
 		}];
 
 		return (
 			<nav className="Nav">
+				<NavLink to="/home" className="Main">
+				<p><h1>WATHES</h1>.<h3>com</h3></p>
+			</NavLink>
+			<div className= "Nav_center">
 				{links.map((link) => {
 					return (
 						<NavLink
@@ -35,7 +34,12 @@ class Navigation extends Component {
 						</NavLink>
 					);
 				})}
+				<NavLink to="/cart" className="cart">
+				Chart
 				<span className = "nav-cartTotalItems">{this.props.cartCount}</span>
+			</NavLink>
+
+			</div>
 			</nav>
 		);
 	}
@@ -48,4 +52,4 @@ function mapStateToProps(state, props) {
 	};
 }
 
-export default connect(mapStateToProps ) (Navigation);
+export default connect(mapStateToProps)(Navigation);
