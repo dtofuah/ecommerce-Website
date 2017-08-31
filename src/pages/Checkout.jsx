@@ -9,18 +9,18 @@ import "./Checkout.scss";
 
 class Checkout extends Component {
 	constructor(props) {
-		super(props); {
-			this.state = {
-				firstname: "",
-				lastname: "",
-				address: "",
-				apt: "",
-				city: "",
-				state: "",
-				zip: "",
-				error: null,
-			};
-		}
+		super(props);
+		this.state = {
+			firstname: "",
+			lastname: "",
+			address: "",
+			apt: "",
+			city: "",
+			state: "",
+			zip: "",
+			error: null,
+		};
+
 	}
 
 
@@ -31,15 +31,15 @@ class Checkout extends Component {
 
 		_handleSubmit = (ev) => {
 			ev.preventDefault();
+
 			this.props.submitOrder(this.state);
+			 this._handleChange(ev);
 		}
 
 	 render() {
 
 		 const { cart, cartCount } = this.props;
 		 let sum = 0;
-
-
 			return (
 				<div className="checkout_page">
 					<div className="checkout_header"><h1>Finishing Your Checkout</h1></div>
@@ -64,12 +64,13 @@ class Checkout extends Component {
 
 
 	 						<form>
-	 							<lable>First Name:</lable>   <input name="firstname" type= "text" placeholder="First name"/><br/><br/>
-	 							<lable>Last Name:</lable>    <input name="lastname" type= "text" placeholder="Last Name"/><br/><br/>
-	 							<lable>Street:</lable>       <input name="street" type= "text" placeholder="Street"/><br/><br/>
-	 							<lable>Apartment:</lable>    <input name="apt" type= "text" placeholder="Apt"/><br/><br/>
-	 							<lable>City: </lable>        <input name="city" type= "text" placeholder="City"/><br/><br/>
-	 							<lable>State:</lable>	      <select name="state" id="state">
+
+	 							<lable>First Name:</lable>   <input value="" name="firstname" type= "text" onChange="_handleChange(this.value)" placeholder="First name"/><br/><br/>
+	 							<lable>Last Name:</lable>    <input value="" name="lastname" type= "text" onChange="_handleChange(this.value)" placeholder="Last Name"/><br/><br/>
+	 							<lable>Street:</lable>       <input value="" name="street" type= "text" onChange="_handleChange(this.value)" placeholder="Street"/><br/><br/>
+	 							<lable>Apartment:</lable>    <input value="" name="apt" type= "text" onChange="_handleChange(this.value)" placeholder="Apt"/><br/><br/>
+	 							<lable>City: </lable>        <input value="" name="city" type= "text" onChange="_handleChange(this.value)" placeholder="City"/><br/><br/>
+	 							<lable>State:</lable>	      <select value="" name="state" id="state" onChange="_handleChange(this.value)" >
 	 										  <option value="defaultValue" selected="selected">Select a State</option>
 	 										  <option key="Al"  value="AL">Alabama</option>
 	 										  <option key="AK" value="AK">Alaska</option>
@@ -123,18 +124,19 @@ class Checkout extends Component {
 	 										  <option key="WI" value="WI">Wisconsin</option>
 	 										  <option key="WY" value="WY">Wyoming</option>
 	 										</select><br/><br/>
-	 							<lable>Zip Code:</lable>     <input name="zip" type="number" placeholder="Zip" /><br/>
+	 							<lable>Zip Code:</lable>     <input value="" name="zip" type="number" onChange="_handleChange(this.value)"  placeholder="Zip" /><br/>
 	 						</form>
 	 					</div>
-	 					<div className="checkout-button">
-	 						<Button onClick = {this._handleSubmit}>
-	 							PURCHACE </Button>
-	 					</div>
-	 				</div>
 
+						<div className="checkout-button">
+							<Button  onClick={this._handleSubmit}>
+								PURCHACE </Button>
+						</div>
+
+	 				</div>
 			);
 		}
-	}
+}
 
 
 

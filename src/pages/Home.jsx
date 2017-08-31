@@ -4,6 +4,7 @@ import PRODUCTS from "json/products.json";
 import { Link } from "react-router-dom";
 import { getAll } from "actions/product";
 import { connect } from "react-redux";
+import "./Home.scss";
 
 
 class Home extends Component {

@@ -1,6 +1,6 @@
 import "./Navigation.scss";
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { addCart } from "actions/cart";
 import { connect } from "react-redux";
 
@@ -16,31 +16,31 @@ class Navigation extends Component {
 		}];
 
 		return (
-			<nav className="Nav">
-				<NavLink to="/home" className="Main">
-				<p><h1>WATHES</h1>.<h3>com</h3></p>
-			</NavLink>
-			<div className= "Nav_center">
-				{links.map((link) => {
-					return (
-						<NavLink
-							key={link.to}
-							to={link.to}
-							className="Nav-link"
-							activeClassName="is-active"
-							exact
-						>
-							{link.text}
-						</NavLink>
-					);
-				})}
-				<NavLink to="/cart" className="cart">
-				Chart
-				<span className = "nav-cartTotalItems">{this.props.cartCount}</span>
-			</NavLink>
+			<div className="w3">
 
+				<div><li><Link to="/home" className="Main">
+					<h1>WATHES.com</h1>
+				</Link></li></div>
+
+				<ul className="Nav">
+
+					<li><Link to="/cart" className="cart">
+				CHART
+						<span className = "nav-cartTotalItems">{this.props.cartCount}</span>
+					</Link></li>
+
+					<li><input type="text" name="search" placeholder="Search.."/></li>
+
+					<li><Link to="/about" className="about">
+				ABOUT
+					</Link></li>
+
+					<li><Link to="/" className="home">
+				HOME
+					</Link></li>
+
+				</ul>
 			</div>
-			</nav>
 		);
 	}
 }
