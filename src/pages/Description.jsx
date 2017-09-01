@@ -1,5 +1,6 @@
 
 import React, { Component } from "react";
+import "./Description.scss";
 import PRODUCTS from "json/products.json";
 import { Link } from "react-router-dom";
 import { Button } from "semantic-ui-react";
