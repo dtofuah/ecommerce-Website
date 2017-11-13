@@ -13,28 +13,44 @@ class Home extends Component {
 		 }
 	render() {
 		return (
+
 			<div className = "Home">
+
+				<div className= "main">
+					<div className= "content">
+					<h1>WATCHES.COM</h1>
+					<h2>Your location for the best watches......</h2>
+				</div>
+				</div>
 				{PRODUCTS.map((product, productId) => {
            	return ([
-						 <div>
-				  	<h1>{product.name}</h1>
-				   	<p>
-								{product.category}
-							</p>
-							<p>
-								${product.price}
-							</p>
-							<div>
-								<Link to={`description/${product.id}`}>
-								 <img src = {product.images[0].medium}/>
-							 	<img src = {product.images[1].medium}/>
-	  	</Link>
+							<div className= "product">
+							<Link to={`description/${product.id}`}>
+						 <div className= "product-list">
 
+							<div className="product-pic">
+								  <img src = {product.images[0].medium}/>
 							</div>
+
+							<div className= "product-name">
+							 <h1>{product.name}</h1>
+						 </div>
+
+						 <div className= "product-category">
+							 {product.category}
+						 </div>
+
+						 <div className= "product-price">
+							 ${product.price}
+						 </div>
 						</div>
+						</Link>
+					</div>
 					]);
 				})}
+				<footer>
 
+				</footer>
 			</div>
 		);
 	}

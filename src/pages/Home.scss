@@ -1,4 +1,87 @@
 .Home {
-	padding-top: 150px;
+	padding-top: 68px;
 	text-align: center;
+	width: 100%;
+	background-color: #222222;
 }
+
+.main {
+	height: 500px;
+	width: 100%;
+	background-image: url(watches.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: white;
+	opacity: 0.4;
+	background-size: 100%;
+}
+.content {
+	height: 300px;
+	width: 100%;
+}
+.content h1 {
+	color: blue;
+	font-size: 80px;
+	padding-top: 60px;
+}
+.content h2 {
+	color: red;
+	font-size: 40px;
+	padding-top: 30px;
+}
+
+.product-list{
+	width: 350px;
+	height:490px;
+	border: 4px solid grey;
+	float: left;
+	margin-left: 35px;
+	margin-top: 20px;
+}
+
+.product-list:hover {
+	border: 4px solid red;
+}
+
+.product-name {
+	width: 342px;
+	height:45px;
+	padding-top: 15px;
+	font-size: 20px;
+	background-color: #222222;
+	color: white;
+}
+
+.product-category {
+	width: 342px;
+	height:17px;
+	font-size: 20px;
+	background-color: #222222;
+	color: white;
+}
+
+.product-price {
+	width: 342px;
+	height:27px;
+	font-size: 25px;
+	padding-top: 2px;
+	color: red;
+	background-color: #222222;
+}
+
+.product-pic {
+	width: 342px;
+	height:393px;
+	padding-top: 25px;
+}
+
+.product-pic img {
+    max-width: 100%;
+    max-height: 100%;
+}
+// 
+// footer {
+// 	height: 200px;
+// 	width: 100%;
+// 	background-color: #121212;
+// }
