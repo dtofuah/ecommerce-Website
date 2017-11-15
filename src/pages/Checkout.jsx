@@ -20,8 +20,7 @@ class Checkout extends Component {
 			zip: "",
 			error: null,
 		};
-
-	}
+}
 
 
 		_handleChange = (ev) => {

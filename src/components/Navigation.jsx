@@ -18,7 +18,7 @@ class Navigation extends Component {
 		return (
 			<div className="w3">
 
-				<div><li><Link to="/home" className="Main">
+				<div><li><Link to="/" className="Main">
 					<h1>WATHES.com</h1>
 				</Link></li></div>
 

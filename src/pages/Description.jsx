@@ -29,21 +29,26 @@ class Description extends Component {
 			return (
 				<div className = "Description">
 
+					<div className = "pic">
+					<img src = {product.images[1].medium}/>
+
+			 </div>
+						<div className = "info">
 				  	<h1>{product.name}</h1>
-				   	<p>
-								Category: {product.category}
-					 		</p>
-						 	<p>
-								Price: ${product.price}
-						 	</p>
-						 	<p> Discription: {product.description}</p>
-						 	<p> Ratings: {product.rating}</p>
-						 	<img src = {product.images[1].medium}/>
-						 <img src = {product.images[0].medium}/>
+
+								<h3>Ratings: {product.rating}</h3>
+								<h4>Category: {product.category}</h4>
+								<div className="more">
+								<p> Discription: {product.description}</p>
+							</div>
+						 	</div>
 
 						 <div className="product-add-description">
-						 	<Button value={product.id} onClick={this._handleAddCart}>
-						 		ADD TO CART </Button>
+							 <div className= "new">
+							 <h2>Price: ${product.price}</h2>
+						 	<div className= "Button" value={product.id} onClick={this._handleAddCart}>
+						 		ADD TO CART </div>
+							</div>
 						 	</div>
 				 		</div>
 

@@ -1,0 +1,79 @@
+.app {
+	height: 100%;
+	width: 100%
+}
+.container {
+	padding-top: 80px;
+	background-color: #222222;
+	height: 600px;
+	overflow: scroll;
+}
+
+.items-container {
+	width: 1100px;
+	height: 120px;
+	margin-left: 50px;
+	color: white;
+}
+
+.pic1 {
+	width: 400px;
+	height: 120px;
+	padding-top: 5px;
+	float: left;
+}
+
+.name {
+	width: 300px;
+	height: 120px;
+	padding-top: 40px;
+	float: left;
+}
+
+.price {
+	width: 300px;
+	height: 120px;
+	float: left;
+	padding-top: 40px;
+	padding-left: 70px;
+}
+.low {
+	width: 400px;
+	height: 100px;
+	margin-left: 500px;
+}
+
+.cart-count {
+	width:50%;
+	height: 100px;
+	float: left;
+	padding-bottom: 10px;
+	color: red;
+}
+
+.sum {
+		width: 50%;
+		height: 100px;
+		float: left;
+		color: white;
+		font-size: 30px;
+}
+.checkout-button {
+	width: 250px;
+	height: 20px;
+	border: 2px solid black;
+	background-color: white;
+	color: black;
+	margin-left: 400px;
+	padding-bottom: 50px;
+}
+
+.checkout-button:hover {
+	background-color: red;
+}
+
+footer {
+	height: 200px;
+	width: 100%;
+	background-color: #121212;
+}

@@ -13,7 +13,7 @@ class Home extends Component {
 		 }
 	render() {
 		return (
-
+			<div className= "go">
 			<div className = "Home">
 
 				<div className= "main">
@@ -48,10 +48,11 @@ class Home extends Component {
 					</div>
 					]);
 				})}
-				<footer>
-
-				</footer>
 			</div>
+			<footer>
+
+			</footer>
+		</div>
 		);
 	}
 }
